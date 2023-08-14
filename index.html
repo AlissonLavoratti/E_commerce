@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueStore | Ecommerce</title>
+    <link rel="stylesheet" href="/style/globals.css">
+    <style>
+        /* *, *::before, *::after (APLICA GLOBAL PARA TODOS OS ELEMENTOS HTML E PRA TODOS OS PSEUDOELEMENTOS )*/
+* { 
+    box-sizing: border-box;/*Dimensionamento da caixa da div APARTIR DA BORDA | Caixa de fronteira*//*O PADRAO É CONTENT-BOX, MAS ELE SOMA E ISTO DIFICULTA, ENTÃO A EQUIPE DE CSS CRIOU BORDER-BOX */
+    padding: 0;/*espaço (INTERNO)*/
+    margin: 0;/*espaço (EXTERNO)*/
+    }
+    body {
+        font-family: 'Arial';/*fonte da pagina*/
+    }
+    .navbar {
+        background-color: #2c2c2c;/*cor do fundo*/
+        padding: 1rem;/*preenchimento do tamanho da font (1rem) */
+        position: sticky;/*mantem a posicao do nav fixo na pagina*/
+        top: 0;/*altura totalmente em cima da pagina*/
+        box-shadow: 10px 0px 10px #2c2c2c;/*sombra*/
+        z-index: 99;/*PARA SOBREPOSICAO | EIXOS X, Y e Z, sendo que Z é profundidade, dando aspecto em 3D*/
+    }
+    .header-inner-content {
+        max-width: 1300px;/*largura Maxima*/
+        margin-left: auto;/*margim da esquerda para direita, as duas opcoes de margin centralizam o conteudo*/
+        margin-right: auto;/*margim da direita para esquerda, as duas opcoes de margin centralizam o conteudo*/
+    }
+    .navbar>div {
+        display: flex;/*tipo de display*/
+        align-items: center;/*alinhamento dos itens*/
+        justify-content: space-between;/*distribuicao de conteudos*/
+    }
+    .logo {
+        color: blue;
+    }
+    .logo span {
+        color: white;
+    }
+    .logo span{
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+    .nav-icon-containe {
+        display: flex;
+        align-items: center;
+    }
+    .nav-icon-container img{
+        width: 30px;
+        cursor: pointer;
+    }
+    .nav-icon-container img:first-child{
+        margin-right: 1rem;/*16px*/
+
+    }
+    nav ul li {
+        color: #fff;
+        margin-right: 1.5rem;
+        cursor: pointer;
+    }
+    nav ul li:hover {
+        transform: translateY(-5px );
+        transition: all 0.2s;
+        font-weight: bold;
+    }
+    .menu-button{
+        display: none;/*para fazer sumir algo da tela*/
+    }
+    .header-botton-side{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+    .header-botton-side-left{
+        height: 100%;
+        flex-basis: 50%;
+    }
+    .header-botton-side-right{
+        flex-basis: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-botton-side-left h2{
+        font-size: 3.2rem;
+    }
+    .header-botton-side-right img{
+        width: 115%;
+        margin-bottom: 50%;
+    }
+</style>
+</head>
+<body>
+    <div class="navbar"><!--conteudo ao redor da nav (EXTERNO)-->
+        <div class="header-inner-content"><!--conteudo (INTERNO) -->
+            <h1 class="logo">BLUE<span>STORE</span></h1><!--texto da pagina-->
+            <nav><!--navegacao-->
+                <ul><!--lista-->
+                    <li>Home</li><!--linhas-->
+                    <li>Products</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                    <li>Conta</li>        
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="/images/cart.png" alt="">
+                <img src="/images/menu.png" class="menu-button" alt="">
+            </div> 
+        </div>
+    </div>
+
+    <header>
+        <div class="header-inner-content">
+            <div class="header-botton-side">
+                <div class="header-botton-side-left">
+                <h2>De um novo estilo ao seu Trabalho!</h2>    
+                <p>
+                    Sucesso nem sempre tem haver com grandeza. Tem
+                    haver com consistencia. Trabalho duro consistente 
+                    supera o sucesso. A grandeza virá.
+                </p>
+                <button>Ver agora &#8594;</button>
+            </div>
+            <div class="header-botton-side-right">
+                <img src="/images/gaming-msi-header.png" alt="">
+            </div>  
+            </div>
+        </div>
+    </header>
+</body>
+</html>
